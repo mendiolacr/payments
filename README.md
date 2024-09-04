@@ -44,7 +44,8 @@ docker pull mendiolacr/payments-platform:latest
 ## Running the Solution 🚀
 
 **Access the API**
-   - The API will be available at `http://localhost:8080` .
+   - The payment platform API will be available at `http://localhost:8080` .
+   - The bank simulator API will be available at `http://localhost:8081` .
    - You can test the endpoints using tools like Postman.
 [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://god.gw.postman.com/run-collection/5205075-a0612109-f5a2-4919-aa48-37cca8af6b78?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D5205075-a0612109-f5a2-4919-aa48-37cca8af6b78%26entityType%3Dcollection%26workspaceId%3Df326ae33-2888-45af-b1fe-04ddc953c1e1)
 
