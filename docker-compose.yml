@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  bank_simulator:
+    build:
+      context: ./bank_simulator
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081"
+    networks:
+      - app-network
+
+  payment_platform:
+    build:
+      context: ./payment_platform
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - bank_simulator
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
