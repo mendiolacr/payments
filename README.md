@@ -36,17 +36,39 @@ For download simulator run
 docker pull mendiolacr/bank_simulator:latest
  ```
 
-Download the two services in the same folder and add docker-compose.yml file and run 
+Download the two images and create docker-compose.yml file 
 
+```docker-compose.yml
+version: '3'
+services:
+  payment_platform:
+    image: mendiolacr/payment_platform:latest
+    networks:
+      - my_network
+    ports:
+      - "8080:8080"
+
+  bank_simulator:
+    image: mendiolacr/bank_simulator:latest
+    networks:
+      - my_network
+    ports:
+      - "8181:8181"
+
+networks:
+  my_network:
+    driver: bridge
+```
+
+And run
 ```bash
-docker-compose up --build
+docker-compose up 
 ```
 
 ## Running the Solution 🚀
 
 **Access the API**
    - The payment platform API will be available at `http://localhost:8080` .
-   - The bank simulator API will be available at `http://bank_simulator:8081` .
    - You can test the endpoints using tools like Postman.
 [<img src="https://run.pstmn.io/button.svg" alt="Run In Postman" style="width: 128px; height: 32px;">](https://god.gw.postman.com/run-collection/5205075-a0612109-f5a2-4919-aa48-37cca8af6b78?action=collection%2Ffork&source=rip_markdown&collection-url=entityId%3D5205075-a0612109-f5a2-4919-aa48-37cca8af6b78%26entityType%3Dcollection%26workspaceId%3Df326ae33-2888-45af-b1fe-04ddc953c1e1)
 
