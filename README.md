@@ -38,9 +38,9 @@ docker pull mendiolacr/bank_simulator:latest
 
 Download the two services in the same folder and add docker-compose.yml file and run 
 
-     ```bash
-     docker-compose up --build
-     ```
+```bash
+docker-compose up --build
+```
 
 ## Running the Solution 🚀
 
