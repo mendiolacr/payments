@@ -4,8 +4,8 @@ Payment platform API and bank simulator.
 
 ## Installation 🔧
 
-Follow these steps to get the platform up and running on your local environment:
-
+You have two option:
+### 1 Option
 1. **Download the Project**
    - Clone this repository to your local machine:
      ```bash
@@ -22,6 +22,24 @@ Follow these steps to get the platform up and running on your local environment:
      docker-compose up --build
      ```
    - This will download the necessary images and start the containers for both the application and the database.
+
+### 2 Option
+**Docker Repository**
+
+For download payment platform run
+ ```bash
+docker pull mendiolacr/payments-platform:payment_platform
+ ```
+
+For download simulator run
+ ```bash
+docker pull mendiolacr/payments-platform:bank_simulator
+ ```
+
+OR BOTH run
+ ```bash
+docker pull mendiolacr/payments-platform:latest
+ ```
 
 ## Running the Solution 🚀
 
